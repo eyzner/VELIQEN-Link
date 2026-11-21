@@ -43,12 +43,12 @@ def select_files(source_only=False):
         if path.name in SECRET_NAMES or path.name.startswith(".env.") or path.suffix.lower() in {".p12", ".pfx", ".jks", ".key", ".keystore"}:
             if name != DEBUG_KEY or digest(path) != DEBUG_KEY_SHA256:
                 raise SystemExit("Refusing signing credentials in the public tree: " + name)
-        if name.startswith("android/artifacts/"):
+        if name.startswith("android/build-output/"):
             # Keep text evidence, not duplicate APKs. Full kit has installable
-            # APK in artifacts and platform prebuilt in rom/payload/prebuilt.
+            # APK in Установочные-файлы and platform prebuilt in rom/payload/prebuilt.
             if path.suffix not in {".txt", ".json"}:
                 continue
-        if source_only and (path.suffix in {".apk", ".aab", ".deb"} or name.startswith("artifacts/")):
+        if source_only and (path.suffix in {".apk", ".aab", ".deb"} or name.startswith("Установочные-файлы/")):
             continue
         if source_only and name.startswith("presentations/"):
             continue
@@ -82,8 +82,8 @@ def main():
     output = args.output.resolve()
     if output != ROOT / "dist" and ROOT in output.parents:
         raise SystemExit("Use dist/ or an output directory outside the source tree.")
-    deb = ROOT / f"artifacts/veliqen-link_{VERSION}_amd64.deb"
-    apk = ROOT / f"artifacts/VELIQEN-Link-{VERSION}-Android.apk"
+    deb = ROOT / f"Установочные-файлы/veliqen-link_{VERSION}_amd64.deb"
+    apk = ROOT / f"Установочные-файлы/VELIQEN-Link-{VERSION}-Android.apk"
     rom_apk = ROOT / "rom/payload/prebuilt/VELIQENLink.apk"
     for path in (deb, apk, rom_apk):
         if not path.is_file():

@@ -29,7 +29,7 @@ fi
 export ANDROID_HOME="$SDK_PATH"
 APKSIGNER="$SDK_PATH/build-tools/37.0.0/apksigner"
 [[ -x "$APKSIGNER" ]] || { printf 'Установите Android SDK build-tools;37.0.0.\n' >&2; exit 1; }
-mkdir -p "$HERE/artifacts"
+mkdir -p "$HERE/build-output"
 if [[ "$MODE" == --release ]]; then
     if [[ -z "${VELIQEN_KEYSTORE:-}" ]]; then
         SIGNING_DIR=${VELIQEN_SIGNING_DIR:-${XDG_DATA_HOME:-$HOME/.local/share}/veliqen-link/signing}
@@ -66,20 +66,20 @@ PY
 )
 case "$MODE" in
     --development)
-        OUT="$HERE/artifacts/VELIQEN-Link-$VERSION-development.apk"
+        OUT="$HERE/build-output/VELIQEN-Link-$VERSION-development.apk"
         "$APKSIGNER" sign --ks "$PROJECT/debug.keystore" --ks-key-alias androiddebugkey \
             --ks-pass pass:android --key-pass pass:android --out "$OUT" "$APK"
         printf 'Development APK: отдельный ID tech.veliqen.link.development и публичный отладочный ключ.\n'
         ;;
     --release)
-        OUT="$HERE/artifacts/VELIQEN-Link-$VERSION-release.apk"
+        OUT="$HERE/build-output/VELIQEN-Link-$VERSION-release.apk"
         "$APKSIGNER" sign --ks "$VELIQEN_KEYSTORE" --ks-key-alias "$VELIQEN_KEY_ALIAS" \
             --ks-pass env:VELIQEN_STORE_PASSWORD --key-pass env:VELIQEN_KEY_PASSWORD --out "$OUT" "$APK"
-        cp -- "$APK" "$HERE/artifacts/VELIQEN-Link-$VERSION-unsigned.apk"
+        cp -- "$APK" "$HERE/build-output/VELIQEN-Link-$VERSION-unsigned.apk"
         printf 'Создан APK с постоянной подписью выпуска.\n'
         ;;
     --unsigned)
-        OUT="$HERE/artifacts/VELIQEN-Link-$VERSION-unsigned.apk"
+        OUT="$HERE/build-output/VELIQEN-Link-$VERSION-unsigned.apk"
         cp -- "$APK" "$OUT"
         printf 'Создан unsigned APK для подписи при сборке прошивки.\n'
         ;;
@@ -89,10 +89,10 @@ if [[ "$MODE" != --unsigned ]]; then
 fi
 "$SDK_PATH/build-tools/37.0.0/zipalign" -c -P 16 4 "$OUT"
 if [[ "$MODE" == --release ]]; then
-    python3 "$HERE/VERIFY-APK.py" "$OUT" --sdk "$SDK_PATH" --report "$HERE/artifacts/RELEASE-VERIFY.json"
-    UNSIGNED="$HERE/artifacts/VELIQEN-Link-$VERSION-unsigned.apk"
+    python3 "$HERE/VERIFY-APK.py" "$OUT" --sdk "$SDK_PATH" --report "$HERE/build-output/RELEASE-VERIFY.json"
+    UNSIGNED="$HERE/build-output/VELIQEN-Link-$VERSION-unsigned.apk"
     chmod 644 "$UNSIGNED"
-    (cd "$HERE/artifacts" && sha256sum "$(basename -- "$UNSIGNED")" > "$(basename -- "$UNSIGNED").sha256")
+    (cd "$HERE/build-output" && sha256sum "$(basename -- "$UNSIGNED")" > "$(basename -- "$UNSIGNED").sha256")
     chmod 644 "$UNSIGNED.sha256"
 fi
 chmod 644 "$OUT"

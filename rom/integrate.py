@@ -168,7 +168,7 @@ def pick_apk(raw: str | None) -> Path:
     if raw:
         apk = Path(raw).expanduser().resolve()
     else:
-        candidates = [HERE.parent / "android/artifacts" / f"VELIQEN-Link-1.2.1-{kind}.apk"
+        candidates = [HERE.parent / "android/build-output" / f"VELIQEN-Link-1.2.1-{kind}.apk"
                       for kind in ("unsigned", "release")]
         candidates.append(HERE / "payload/prebuilt/VELIQENLink.apk")
         apk = next((candidate for candidate in candidates if candidate.is_file()), candidates[0])
@@ -333,7 +333,7 @@ def main() -> int:
     install_parser = commands.add_parser("install")
     install_parser.add_argument("--tree", required=True, help="Корень AOSP/LineageOS")
     install_parser.add_argument("--product-mk", required=True, help="Существующий makefile продукта, относительно дерева")
-    install_parser.add_argument("--apk", help="APK с package tech.veliqen.link; по умолчанию из android/artifacts")
+    install_parser.add_argument("--apk", help="APK с package tech.veliqen.link; по умолчанию из android/build-output")
     install_parser.add_argument("--dry-run", action="store_true")
     rollback_parser = commands.add_parser("rollback")
     rollback_parser.add_argument("--tree", required=True)

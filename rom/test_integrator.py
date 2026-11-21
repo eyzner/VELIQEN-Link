@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Exercise real installer safety on a temporary source tree and a real APK.
-Run: python3 test_integrator.py --apk ../android/artifacts/VELIQEN-Link-1.2.1-unsigned.apk
+Run: python3 test_integrator.py --apk ../android/build-output/VELIQEN-Link-1.2.1-unsigned.apk
 SPDX-License-Identifier: GPL-3.0-or-later
 """
 from pathlib import Path

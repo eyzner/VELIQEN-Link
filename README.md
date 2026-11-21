@@ -8,7 +8,7 @@ Connect an Ubuntu computer to a VELIQEN OS or Android phone. Use the computer fo
 
 ## Install
 
-Download these two files from the project's GitHub Release or the supplied release kit:
+Download these ready-to-install files from the project's GitHub Release. In the full release kit, both are in the **Установочные-файлы** (installation files) folder:
 
 | Device | File |
 | --- | --- |
@@ -34,15 +34,13 @@ For a failing regional Ubuntu mirror, the full release kit also includes an opti
 bash INSTALL-UBUNTU.sh --ubuntu-main-mirror
 ```
 
-It uses temporary official Ubuntu sources without rewriting `/etc/apt`. See [installation details](docs/INSTALLATION.md).
+It uses temporary official Ubuntu sources without rewriting `/etc/apt`. See [installation details in Russian](docs/INSTALLATION.md).
 
 ### Phone
 
 Open the APK on the phone. If Android asks, allow installation from the app you used to open the file, then install VELIQEN Link.
 
-The public application ID is **`tech.veliqen.link`**. The APK uses a dedicated release certificate. It can be installed alongside the earlier VELIQEN development builds and official KDE Connect, whose application ID is different. Pair the new app once and grant the features you want to use. Close or disable the old app to avoid duplicate notifications and connections. This installation does not migrate its private data or remove it automatically.
-
-Future public updates must keep the same application ID and signing key. The public certificate is in [android/RELEASE-SIGNING.json](android/RELEASE-SIGNING.json). Private signing material is not part of this repository or the public release kit.
+Version 1.2.1 installs alongside earlier test versions and official KDE Connect. Pair the new app once and grant the features you want to use. Close or disable the old app to avoid duplicate notifications and connections. Its settings and private data are not migrated automatically.
 
 ## Connect once
 
@@ -74,30 +72,12 @@ The phone opens to one computer card and four actions: Screen, Files, Clipboard 
 
 - This release targets Ubuntu 26.04 on amd64, GNOME and PipeWire. The package enforces its required dependency versions. Other distributions and ARM computers are not validated targets for this binary.
 - On GNOME Wayland, enable the included VELIQEN Clipboard extension from the application. A logout and login may be needed before a newly installed extension is available to the session.
-- Android restricts clipboard reads in the background. A regular APK provides manual transfer and permitted foreground behavior. Deeper clipboard integration requires the separately documented VELIQEN OS system build.
+- Android restricts clipboard reads in the background. A regular APK provides manual transfer and permitted foreground behavior. Automatic background transfer requires system integration in VELIQEN OS.
 - Android always controls screen-sharing and Accessibility permissions. The app cannot bypass the lock screen or grant these permissions to itself.
 - Call audio depends on the phone firmware, Bluetooth adapter and HFP support. Validate two-way audio and DTMF on the hardware you intend to support.
 - The native screen mode sends JPEG frames and has no screen-audio channel. The advanced scrcpy mode has its own Android authorization flow.
 
 See [validation scope](docs/VALIDATION.md), [calls](docs/CALLS_RU.md) and [native screen sharing](docs/NATIVE_SCREEN_RU.md).
-
-## Build and contribute
-
-```bash
-python3 BUILD-PACKAGES.py
-```
-
-Android uses JDK 21, Android SDK 37 and Build Tools 37.0.0. The Gradle wrapper and pinned build versions are included. See [Android build instructions](android/README-RU.md).
-
-```bash
-bash android/BUILD-APK.sh --unsigned
-```
-
-Unsigned APKs are build artifacts and cannot be installed normally. Only the signed `VELIQEN-Link-1.2.1-Android.apk` is the public installation file.
-
-The GitHub Actions workflow builds the DEB and an unsigned Android artifact. It does not receive signing secrets or publish releases. Local build results and checks are recorded in `RELEASE-CHECKS.json`; the workflow itself must run in the destination repository before a CI result can be claimed.
-
-For publication, use [the GitHub guide](docs/GITHUB-RELEASE.md). Keep the corresponding source, third-party source bundle, notices and checksums with the binaries.
 
 ## Open-source components
 

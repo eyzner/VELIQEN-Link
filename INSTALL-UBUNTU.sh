@@ -19,7 +19,7 @@ while (($#)); do
         --help)
             printf '%s\n' 'Установка VELIQEN Link и зависимостей в Ubuntu/Debian.' \
                 'Запускать от обычного пользователя.' \
-                '  --kit DIR              Распакованный комплект с каталогом artifacts.' \
+                '  --kit DIR              Распакованный комплект с каталогом Установочные-файлы.' \
                 '  --ubuntu-main-mirror   Временно использовать официальные HTTPS-серверы Ubuntu.' \
                 '                         Файлы /etc/apt не меняются; сторонние репозитории не используются.' \
                 '  --no-gnome             Совместимость: дополнение не включается установщиком.' \
@@ -45,7 +45,7 @@ if [[ ! -d "$KIT" ]]; then
     exit 1
 fi
 ROOT="$(cd -- "$KIT" && pwd)"
-PACKAGE="$ROOT/artifacts/veliqen-link_1.2.1_amd64.deb"
+PACKAGE="$ROOT/Установочные-файлы/veliqen-link_1.2.1_amd64.deb"
 if [[ ! -f "$PACKAGE" ]]; then
     printf '%s\n' 'Не найден .deb пакет. Нужен полный комплект либо предварительный запуск BUILD-PACKAGES.py.'
     exit 1
@@ -238,7 +238,7 @@ sudo apt-get "${APT_OPTIONS[@]}" --no-remove install -y "$STAGED_PACKAGE"
 if [[ "$NO_AUTOSTART" -eq 1 ]]; then
     PYTHONPATH="$ROOT/linux" /usr/bin/python3 -c 'from veliqen_link.session_setup import set_autostart; set_autostart(False)'
 fi
-printf '\n%s\n' 'Установка завершена. Открой VELIQEN Link из меню приложений.' 'На телефон установи artifacts/VELIQEN-Link-1.2.1-Android.apk.' 'Первое сопряжение: одна сеть Wi-Fi → Подключить → подтвердить на телефоне.' 'Звонки: открой раздел Звонки → Подключить звонки.' 'Экран: нажми Открыть экран телефона и подтверди запрос на телефоне.' 'Буфер GNOME: включи автопередачу в Настройках. После первой установки может понадобиться повторный вход в Ubuntu.'
+printf '\n%s\n' 'Установка завершена. Открой VELIQEN Link из меню приложений.' 'На телефон установи Установочные-файлы/VELIQEN-Link-1.2.1-Android.apk.' 'Первое сопряжение: одна сеть Wi-Fi → Подключить → подтвердить на телефоне.' 'Звонки: открой раздел Звонки → Подключить звонки.' 'Экран: нажми Открыть экран телефона и подтверди запрос на телефоне.' 'Буфер GNOME: включи автопередачу в Настройках. После первой установки может понадобиться повторный вход в Ubuntu.'
 
 if [[ -n "${DISPLAY:-}${WAYLAND_DISPLAY:-}" ]]; then
     nohup veliqen-link >/dev/null 2>&1 </dev/null &

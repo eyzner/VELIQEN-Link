@@ -2,8 +2,8 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 set -euo pipefail
 HERE=$(CDPATH= cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)
-APK=${1:-$HERE/artifacts/VELIQEN-Link-1.2.1-release.apk}
-[[ -f "$APK" ]] || { printf 'APK не найден: %s\nСначала выполните BUILD-APK.sh.\n' "$APK" >&2; exit 1; }
+APK=${1:-$HERE/../Установочные-файлы/VELIQEN-Link-1.2.1-Android.apk}
+[[ -f "$APK" ]] || { printf 'APK не найден: %s\nСкачайте готовый VELIQEN-Link-1.2.1-Android.apk или укажите путь к нему первым аргументом.\n' "$APK" >&2; exit 1; }
 command -v adb >/dev/null || { printf 'Установите Android platform-tools (adb).\n' >&2; exit 1; }
 printf 'Подтвердите отладку на вашем телефоне, если появится запрос.\n'
 if ! adb install -r "$APK"; then

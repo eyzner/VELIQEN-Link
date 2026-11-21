@@ -44,7 +44,7 @@ jobs:
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: ubuntu-deb
-          path: artifacts/*.deb
+          path: Установочные-файлы/*.deb
           if-no-files-found: error
 
   android:
@@ -69,7 +69,7 @@ jobs:
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: android-unsigned-not-installable
-          path: android/artifacts/*-unsigned.apk
+          path: android/build-output/*-unsigned.apk
           if-no-files-found: error
 
 # Public CI intentionally has no signing credentials and no release-write access.

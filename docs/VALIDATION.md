@@ -31,7 +31,7 @@
 - FileProvider, AndroidX Startup и MMS provider используют новый ID.
 - Приватные данные старого тестового приложения не переносятся и не удаляются автоматически.
 
-Результат текущего фактического прогона в AOSP API 23 software emulator приведён в `android/EMULATOR-QA.json`, включая проверку установки рядом с прежним приложением. Он относится к указанной версии и условиям эмулятора, а не к Android 17 на физическом телефоне. Полные параметры сборки и подписи: `android/BUILD-STATUS.json`, `android/RELEASE-SIGNING.json`, текстовые записи в `android/artifacts/`.
+Результат текущего фактического прогона в AOSP API 23 software emulator приведён в `android/EMULATOR-QA.json`, включая проверку установки рядом с прежним приложением. Он относится к указанной версии и условиям эмулятора, а не к Android 17 на физическом телефоне. Полные параметры сборки и подписи: `android/BUILD-STATUS.json`, `android/RELEASE-SIGNING.json`, текстовые записи в `android/build-output/`.
 
 ## Ubuntu и системная интеграция
 

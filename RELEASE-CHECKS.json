@@ -55,7 +55,14 @@
     "workflow_yaml_parsed": true,
     "remote_workflow_executed": false,
     "published": false,
-    "source_and_notices_included": true
+    "source_and_notices_included": true,
+    "release_tag": "v1.2.1-r2",
+    "previous_release": {
+      "tag": "v1.2.1",
+      "published": true,
+      "url": "https://github.com/eyzner/VELIQEN-Link/releases/tag/v1.2.1",
+      "source_tree": "10affa4e9c98fb1f5154873a0b24ba037e60ac71"
+    }
   },
   "private_signing": {
     "excluded_from_public_artifacts": true,
@@ -69,13 +76,13 @@
     "No complete ROM build"
   ],
   "artifacts": {
-    "artifacts/VELIQEN-Link-1.2.1-Android.apk": {
+    "Установочные-файлы/VELIQEN-Link-1.2.1-Android.apk": {
       "bytes": 20736833,
       "sha256": "f2137fe62a838828e043ffddd1545b555c8c20489e1012d04a465a71c9bb8853"
     },
-    "artifacts/veliqen-link_1.2.1_amd64.deb": {
-      "bytes": 14424456,
-      "sha256": "065b4a7b2bd8a559cdb3bbb06cc55a08ceade4f1420f62869abadda9001e510e"
+    "Установочные-файлы/veliqen-link_1.2.1_amd64.deb": {
+      "bytes": 14422556,
+      "sha256": "149e46438a4da71b2f7669a10342e2f0b76b2076565915705fceec4fda79312a"
     },
     "rom/payload/prebuilt/VELIQENLink.apk": {
       "bytes": 20619102,
@@ -97,5 +104,14 @@
       "bytes": 1667517,
       "sha256": "2413eda1c53a9e8b14af24f0cee50ea56c730069dadd3aea623b8b7a46b6a0c3"
     }
+  },
+  "distribution_revision": "r2",
+  "documentation_revision": {
+    "user_guides": "installation, pairing and use; no build instructions",
+    "installers_folder": "Установочные-файлы",
+    "android_output_folder": "android/build-output",
+    "application_payload_unchanged": true,
+    "apk_unchanged": true,
+    "developer_docs_in_deb": false
   }
 }

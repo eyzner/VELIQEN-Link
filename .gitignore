@@ -8,8 +8,8 @@
 **/local.properties
 **/.idea/
 .DS_Store
-/artifacts/
-/android/artifacts/
+/Установочные-файлы/
+/android/build-output/
 /dist/
 /qa-*/
 

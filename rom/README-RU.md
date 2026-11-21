@@ -25,7 +25,7 @@ bash INSTALL-ROM.sh \
 
 `--dry-run` не записывает ни исходники, ни резервные копии. Если проверка показывает верный продукт, повторите эту же команду без `--dry-run`.
 
-По умолчанию APK берётся из `../android/artifacts`: сначала unsigned, затем release; если рядом нет Android-проекта, используется включённый `payload/prebuilt/VELIQENLink.apk`. Любой вариант повторно подписывается платформенным ключом ROM. Для своего APK задайте `--apk /полный/путь/к/VELIQEN-Link.apk`; установщик проверяет package ID `tech.veliqen.link`. Development APK с package `.development` или `.debug` не принимается.
+По умолчанию APK берётся из `../android/build-output`: сначала unsigned, затем release; если рядом нет Android-проекта, используется включённый `payload/prebuilt/VELIQENLink.apk`. Любой вариант повторно подписывается платформенным ключом ROM. Для своего APK задайте `--apk /полный/путь/к/VELIQEN-Link.apk`; установщик проверяет package ID `tech.veliqen.link`. Development APK с package `.development` или `.debug` не принимается.
 
 После подключения выполните вашу обычную сборку. При уже настроенном окружении AOSP можно сначала проверить отдельный модуль:
 

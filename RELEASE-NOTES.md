@@ -1,8 +1,15 @@
-# VELIQEN Link 1.2.1
+# VELIQEN Link 1.2.1 — комплект r2
 
 ## Русский
 
 VELIQEN Link связывает Ubuntu и VELIQEN OS / Android: SMS, файлы, текст буфера, экран телефона и сотовые звонки через Bluetooth.
+
+### Исправлены инструкции и папки
+
+- Пользовательские инструкции на русском и английском описывают установку готовых файлов, подключение и использование.
+- Готовые DEB и APK находятся в папке **Установочные-файлы** полного комплекта.
+- Установщики используют новое название папки; DEB содержит обновлённую инструкцию.
+- Версия приложений остаётся **1.2.1**. Отметка **r2** относится к оформлению и содержимому комплекта.
 
 ### Установка
 
@@ -30,6 +37,13 @@ APT требует доступных репозиториев для отсут
 ## English
 
 VELIQEN Link connects Ubuntu and a VELIQEN OS / Android phone for SMS, files, clipboard text, phone screen access and cellular calls through Bluetooth.
+
+### Updated instructions and folders
+
+- Russian and English user guides cover installation, pairing and everyday use.
+- Ready-to-install DEB and APK files are in the **Установочные-файлы** (Installers) folder of the full kit.
+- Installation scripts use the new folder name; the DEB includes the updated user guide.
+- The application version remains **1.2.1**. The **r2** label identifies this revised distribution kit.
 
 ### Install
 

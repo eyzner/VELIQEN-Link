@@ -17,7 +17,7 @@ import zipfile
 ROOT = Path(__file__).resolve().parent
 VERSION = "1.2.1"
 ARCH = "amd64"
-OUTPUT = ROOT / "artifacts"
+OUTPUT = ROOT / "Установочные-файлы"
 OUTPUT.mkdir(exist_ok=True)
 VENDOR = ROOT / "vendor/scrcpy-linux-x86_64-v5.0.1.tar.gz"
 VENDOR_SHA256 = "9f969d30cc574816077edecda65719c1c70b0aee1df1ba5fa00779ac07b8fd6e"
@@ -84,7 +84,7 @@ with tempfile.TemporaryDirectory(prefix="veliqen-deb-") as temporary:
     if (ROOT / "vendor/licenses").is_dir():
         shutil.copytree(ROOT / "vendor/licenses", docs / "vendor-licenses")
     # Keep user docs and screenshots; large internal test/build logs stay in source.
-    shutil.copytree(ROOT / "docs", docs / "docs", ignore=shutil.ignore_patterns("qa"))
+    shutil.copytree(ROOT / "docs", docs / "docs", ignore=shutil.ignore_patterns("qa", "development"))
     (docs / "copyright").write_text("VELIQEN Link desktop integration: GPL-3.0-or-later.\n"
         "See LICENSE and THIRD_PARTY.md for authorship and component sources.\n"
         "The unmodified scrcpy distribution is bundled under its upstream terms.\n"

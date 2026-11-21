@@ -20,7 +20,7 @@ import tempfile
 ROOT = Path(__file__).resolve().parents[1]
 parser = argparse.ArgumentParser()
 parser.add_argument("--package", type=Path,
-    default=ROOT / "artifacts/veliqen-link_1.2.1_amd64.deb")
+    default=ROOT / "Установочные-файлы/veliqen-link_1.2.1_amd64.deb")
 parser.add_argument("--previous", type=Path)
 parser.add_argument("--inside-user-namespace", action="store_true")
 args = parser.parse_args()

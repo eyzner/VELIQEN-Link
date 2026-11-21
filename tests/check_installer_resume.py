@@ -25,7 +25,7 @@ with tempfile.TemporaryDirectory(prefix='installer-resume-qa-') as temporary:
     os_release = base / 'os-release'
     write(keyring, 'fixture')
     write(os_release, 'ID=ubuntu\nVERSION_CODENAME=resolute\n')
-    write(kit / 'artifacts/veliqen-link_1.2.1_amd64.deb', 'placeholder; never installed')
+    write(kit / 'Установочные-файлы/veliqen-link_1.2.1_amd64.deb', 'placeholder; never installed')
     write(kit / 'linux/veliqen_link/__init__.py', '')
     write(kit / 'linux/veliqen_link/session_setup.py', (SOURCE.parent / 'linux/veliqen_link/session_setup.py').read_text())
     write(kit / 'scripts/STOP-RUNNING.py', "import json, os\nwith open(os.environ['QA_LOG'], 'a') as f: f.write(json.dumps({'phase':'stop'})+'\\n')\nraise SystemExit(8 if os.environ.get('QA_FAIL') == 'stop' else 0)\n")
