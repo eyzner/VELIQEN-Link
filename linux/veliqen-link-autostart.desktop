@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=VELIQEN Link
+Comment=Local phone connection
+Exec=veliqen-link --background
+TryExec=veliqen-link
+Icon=veliqen-link
+Terminal=false
+X-GNOME-Autostart-enabled=true
+X-GNOME-Autostart-Delay=10

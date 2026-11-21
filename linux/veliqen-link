@@ -1,0 +1,9 @@
+#!/bin/sh
+# SPDX-License-Identifier: GPL-3.0-or-later
+set -eu
+VELIQEN_APP_DIR=/usr/share/veliqen-link
+if [ ! -d "$VELIQEN_APP_DIR/veliqen_link" ]; then
+    VELIQEN_APP_DIR="$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)"
+fi
+export PYTHONPATH="$VELIQEN_APP_DIR"
+exec /usr/bin/python3 -m veliqen_link "$@"

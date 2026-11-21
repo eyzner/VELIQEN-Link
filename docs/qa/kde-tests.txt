@@ -1,0 +1,41 @@
+test_clipboard_uses_explicit_share_text_without_a_desktop_read (test_kde.KdeVariantTests.test_clipboard_uses_explicit_share_text_without_a_desktop_read) ... ok
+test_conversations_live_on_device_path (test_kde.KdeVariantTests.test_conversations_live_on_device_path) ... ok
+test_device_id_path_injection_is_rejected (test_kde.KdeVariantTests.test_device_id_path_injection_is_rejected) ... ok
+test_devices_and_properties (test_kde.KdeVariantTests.test_devices_and_properties) ... ok
+test_file_uri_is_encoded_for_unicode_spaces_hash_and_percent (test_kde.KdeVariantTests.test_file_uri_is_encoded_for_unicode_spaces_hash_and_percent) ... ok
+test_invalid_urls_and_directory_fail_before_transfer (test_kde.KdeVariantTests.test_invalid_urls_and_directory_fail_before_transfer) ... ok
+test_message_format_failure_is_explicit (test_kde.KdeVariantTests.test_message_format_failure_is_explicit) ... ok
+test_message_ping_does_not_silently_fallback_to_regular_ping (test_kde.KdeVariantTests.test_message_ping_does_not_silently_fallback_to_regular_ping) ... ok
+test_messages_receive_signals_and_do_not_mix_threads_or_same_date_ids (test_kde.KdeVariantTests.test_messages_receive_signals_and_do_not_mix_threads_or_same_date_ids) ... ok
+test_offline_sms_is_rejected_before_send (test_kde.KdeVariantTests.test_offline_sms_is_rejected_before_send) ... ok
+test_pair_accepts_existing_peer_request (test_kde.KdeVariantTests.test_pair_accepts_existing_peer_request) ... ok
+test_regular_ping_keeps_no_argument_api (test_kde.KdeVariantTests.test_regular_ping_keeps_no_argument_api) ... ok
+test_sms_access_denial_is_not_reported_as_sent_or_retried (test_kde.KdeVariantTests.test_sms_access_denial_is_not_reported_as_sent_or_retried) ... ok
+test_sms_serializes_variant_of_address_struct_and_int64_sim (test_kde.KdeVariantTests.test_sms_serializes_variant_of_address_struct_and_int64_sim) ... ok
+test_unsupported_method_fails_before_mutation (test_kde.KdeVariantTests.test_unsupported_method_fails_before_mutation) ... ok
+/usr/lib/python3/dist-packages/gi/overrides/Gio.py:113: DeprecationWarning: Gio.DBusConnection.register_object is deprecated
+  return super().register_object(object_path,
+test_clipboard_uses_explicit_share_text_without_a_desktop_read (test_kde.KdeWireTests.test_clipboard_uses_explicit_share_text_without_a_desktop_read) ... ok
+test_conversations_live_on_device_path (test_kde.KdeWireTests.test_conversations_live_on_device_path) ... ok
+test_device_id_path_injection_is_rejected (test_kde.KdeWireTests.test_device_id_path_injection_is_rejected) ... ok
+test_devices_and_properties (test_kde.KdeWireTests.test_devices_and_properties) ... ok
+test_file_uri_is_encoded_for_unicode_spaces_hash_and_percent (test_kde.KdeWireTests.test_file_uri_is_encoded_for_unicode_spaces_hash_and_percent) ... ok
+test_invalid_urls_and_directory_fail_before_transfer (test_kde.KdeWireTests.test_invalid_urls_and_directory_fail_before_transfer) ... ok
+test_message_format_failure_is_explicit (test_kde.KdeWireTests.test_message_format_failure_is_explicit) ... ok
+test_message_ping_does_not_silently_fallback_to_regular_ping (test_kde.KdeWireTests.test_message_ping_does_not_silently_fallback_to_regular_ping) ... ok
+test_messages_receive_signals_and_do_not_mix_threads_or_same_date_ids (test_kde.KdeWireTests.test_messages_receive_signals_and_do_not_mix_threads_or_same_date_ids) ... ok
+test_offline_sms_is_rejected_before_send (test_kde.KdeWireTests.test_offline_sms_is_rejected_before_send) ... ok
+test_pair_accepts_existing_peer_request (test_kde.KdeWireTests.test_pair_accepts_existing_peer_request) ... ok
+test_regular_ping_keeps_no_argument_api (test_kde.KdeWireTests.test_regular_ping_keeps_no_argument_api) ... ok
+test_sms_access_denial_is_not_reported_as_sent_or_retried (test_kde.KdeWireTests.test_sms_access_denial_is_not_reported_as_sent_or_retried) ... ok
+test_sms_serializes_variant_of_address_struct_and_int64_sim (test_kde.KdeWireTests.test_sms_serializes_variant_of_address_struct_and_int64_sim) ... ok
+test_unsupported_method_fails_before_mutation (test_kde.KdeWireTests.test_unsupported_method_fails_before_mutation) ... ok
+test_no_subid_api_uses_verified_conversations_fallback_only_for_default_sim (test_kde.LegacySmsTests.test_no_subid_api_uses_verified_conversations_fallback_only_for_default_sim) ... ok
+test_no_subid_api_uses_verified_conversations_fallback_only_for_default_sim (test_kde.LegacyVariantTests.test_no_subid_api_uses_verified_conversations_fallback_only_for_default_sim) ... ok
+test_message_ping_sends_exact_string_variant (test_kde.PingMessageVariantTests.test_message_ping_sends_exact_string_variant) ... ok
+test_message_ping_sends_exact_string_variant (test_kde.PingMessageWireTests.test_message_ping_sends_exact_string_variant) ... ok
+
+----------------------------------------------------------------------
+Ran 34 tests in 0.306s
+
+OK

@@ -1,0 +1,5 @@
+PASS success: three consistent APT phases, STOP after download, standalone DEB, private caches, readable package, preserved trust/source fields
+PASS failures: update/download never stop app; STOP failure prevents install; install failure prevents finalizers
+PASS help: invalid kit allowed, no APT/helper invocation
+PASS source refusal: non-Ubuntu, mixed origins, unsafe trust; fixture source bytes unchanged after normal runs
+ALL ISOLATED CHECKS PASSED; no real sudo, APT, service, or system file changes

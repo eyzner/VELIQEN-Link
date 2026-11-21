@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="veliqen_fork_notice">VELIQEN Link 1.0.0 is an independent adaptation of KDE Connect 1.37.3, not an official KDE release. Original authors and licenses are preserved. Corresponding modified source is included in the VELIQEN Link distribution. Automatic background clipboard access requires the platform-signed VELIQEN OS build; a regular APK supports manual clipboard sharing.</string>
+    <string name="veliqen_upstream_source">KDE source</string>
+</resources>

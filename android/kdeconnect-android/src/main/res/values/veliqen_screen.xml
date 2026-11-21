@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="veliqen_screen_input_label">VELIQEN: управление экраном</string>
+    <string name="veliqen_screen_input_description">Нажатия, жесты и ввод текста с твоего сопряжённого компьютера. Работает только во время явно начатого показа экрана. При остановке показа, блокировке телефона или потере соединения управление прекращается.</string>
+</resources>

@@ -1,0 +1,36 @@
+[Desktop Entry]
+Type=Application
+Name=VELIQEN Link
+GenericName=Phone integration
+GenericName[ru]=Связь с телефоном
+Comment=Clipboard, SMS, calls, files and Android screen
+Comment[ru]=Буфер, SMS, звонки, файлы и экран телефона
+Exec=veliqen-link %U
+Icon=veliqen-link
+Terminal=false
+Categories=Network;
+Keywords=Android;Phone;SMS;Bluetooth;VELIQEN;
+StartupNotify=true
+StartupWMClass=veliqen-link
+MimeType=x-scheme-handler/tel;x-scheme-handler/sms;x-scheme-handler/veliqen;
+Actions=Calls;Messages;Screen;Files;
+
+[Desktop Action Calls]
+Name=Calls
+Name[ru]=Звонки
+Exec=veliqen-link --page calls
+
+[Desktop Action Messages]
+Name=Messages
+Name[ru]=Сообщения
+Exec=veliqen-link --page messages
+
+[Desktop Action Screen]
+Name=Phone screen
+Name[ru]=Экран телефона
+Exec=veliqen-link --page screen
+
+[Desktop Action Files]
+Name=Send files
+Name[ru]=Передать файлы
+Exec=veliqen-link --page files

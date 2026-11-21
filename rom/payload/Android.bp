@@ -1,0 +1,18 @@
+// SPDX-License-Identifier: GPL-3.0-or-later
+// Adapted KDE Connect APK. The ROM signs this APK using its own platform key.
+android_app_import {
+    name: "VELIQENLink",
+    apk: "prebuilt/VELIQENLink.apk",
+    certificate: "platform",
+    privileged: true,
+    product_specific: true,
+    // Matches the final merged APK manifest; no global uses-library bypass.
+    optional_uses_libs: [
+        "androidx.window.extensions",
+        "androidx.window.sidecar",
+        "org.apache.http.legacy",
+    ],
+    dex_preopt: {
+        enabled: false,
+    },
+}

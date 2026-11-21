@@ -1,0 +1,8 @@
+{
+  "uuid": "veliqen-clipboard@veliqen.tech",
+  "name": "VELIQEN Clipboard",
+  "description": "Передача текстового буфера в VELIQEN Link. Работает только после включения синхронизации в приложении. История не сохраняется.",
+  "shell-version": ["45", "46", "47", "48", "49", "50", "51"],
+  "version": 1,
+  "url": "https://veliqen.tech"
+}

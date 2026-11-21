@@ -1,0 +1,38 @@
+# Local build output and caches
+**/__pycache__/
+*.py[cod]
+**/.gradle/
+**/.kotlin/
+**/.cxx/
+**/build/
+**/local.properties
+**/.idea/
+.DS_Store
+/artifacts/
+/android/artifacts/
+/dist/
+/qa-*/
+
+# Signing credentials are never part of the public repository.
+/private-signing/
+**/store-password
+**/key-password
+**/signing-password*
+**/keystore.properties
+.env
+.env.*
+secrets.json
+*.jks
+*.p12
+*.pfx
+*.key
+*.keystore
+!android/kdeconnect-android/debug.keystore
+
+# Release binaries belong in GitHub Releases. The ROM prebuilt is supplied
+# in the separate ROM release archive, not committed in the source tree.
+*.apk
+*.aab
+*.deb
+*.idsig
+*.log

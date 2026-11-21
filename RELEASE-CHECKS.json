@@ -1,0 +1,101 @@
+{
+  "version": "1.2.1",
+  "date": "2026-11-21",
+  "deb": {
+    "architecture": "amd64",
+    "target": "Ubuntu 26.04 GNOME/PipeWire",
+    "owner_uid_gid": 0,
+    "package_directory_modes": "0755",
+    "unsafe_write_permissions": false,
+    "source_bytes_match": true,
+    "no_maintainer_scripts": true,
+    "system_dependencies_declared": true,
+    "gnome_extension_bundled": true,
+    "scrcpy_version": "5.0.1",
+    "desktop_caches": "system dpkg triggers; desktop-file-utils explicitly required",
+    "lifecycle": "fresh, upgrade from 1.2.0 all, reinstall, remove, purge in isolated temporary dpkg roots",
+    "dependencies_installed_during_fixture": false
+  },
+  "current_checks": {
+    "session_setup_tests": 11,
+    "screen_tools_tests": 8,
+    "gtk_screen_renders": 12,
+    "installer_isolated_flow": "pass",
+    "real_apt_local_deb_regression": "pass; old error reproduced; corrected cached install reaches refusing dpkg guard",
+    "android_build": "android/BUILD-STATUS.json",
+    "android_runtime": "android/EMULATOR-QA.json",
+    "android_public_apk_installed_beside_legacy": "pass on API23 emulator",
+    "rom_integrator": "pass in temporary source tree",
+    "android_patch_files_matching": 702,
+    "desktop_entry_validation": "pass"
+  },
+  "historical_checks": {
+    "version": "1.2.0",
+    "desktop_tests": 155,
+    "kde_tests": 34,
+    "report": "docs/VALIDATION-1.2.0.md",
+    "not_claimed_as_current_full_rerun": true
+  },
+  "presentations": {
+    "languages": [
+      "ru",
+      "en"
+    ],
+    "slides_each": 9,
+    "formats": [
+      "pptx",
+      "pdf"
+    ],
+    "editable_text": true,
+    "rendered_and_inspected": true,
+    "pdf_renderer": "LibreOffice",
+    "opened_in_ms_powerpoint": false
+  },
+  "github": {
+    "workflow_yaml_parsed": true,
+    "remote_workflow_executed": false,
+    "published": false,
+    "source_and_notices_included": true
+  },
+  "private_signing": {
+    "excluded_from_public_artifacts": true,
+    "public_certificate": "android/RELEASE-SIGNING.json",
+    "owner_backup_delivered_separately": true
+  },
+  "limitations": [
+    "No full dependency download/install on clean Ubuntu target",
+    "No physical phone or Bluetooth/audio validation",
+    "No Android17 runtime permissions/MediaProjection test",
+    "No complete ROM build"
+  ],
+  "artifacts": {
+    "artifacts/VELIQEN-Link-1.2.1-Android.apk": {
+      "bytes": 20736833,
+      "sha256": "f2137fe62a838828e043ffddd1545b555c8c20489e1012d04a465a71c9bb8853"
+    },
+    "artifacts/veliqen-link_1.2.1_amd64.deb": {
+      "bytes": 14424456,
+      "sha256": "065b4a7b2bd8a559cdb3bbb06cc55a08ceade4f1420f62869abadda9001e510e"
+    },
+    "rom/payload/prebuilt/VELIQENLink.apk": {
+      "bytes": 20619102,
+      "sha256": "3f5fef09c6a2d33ae20df94b82fb4f9d243e797631d73a6c58cbfe7dccd88a8e"
+    },
+    "presentations/VELIQEN-Link-1.2.1-Presentation-EN.pdf": {
+      "bytes": 546810,
+      "sha256": "14ef56e6b56fd8fc1065e4182e4432cf5a87addb2f7375312d0c60147ea26bcd"
+    },
+    "presentations/VELIQEN-Link-1.2.1-Presentation-EN.pptx": {
+      "bytes": 1665994,
+      "sha256": "3a92ff3132a391ba39902f63c241987e19f44f7b88ebdb7b24c238a6e4721f2c"
+    },
+    "presentations/VELIQEN-Link-1.2.1-Presentation-RU.pdf": {
+      "bytes": 557025,
+      "sha256": "bef15f20ae33aa900f883e0e8990eeb1c70b39ab93c93f52bb8b4018c190118d"
+    },
+    "presentations/VELIQEN-Link-1.2.1-Presentation-RU.pptx": {
+      "bytes": 1667517,
+      "sha256": "2413eda1c53a9e8b14af24f0cee50ea56c730069dadd3aea623b8b7a46b6a0c3"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="veliqen_fork_notice">VELIQEN Link 1.0.0 — независимая адаптация KDE Connect 1.37.3. Это не официальный выпуск KDE. Авторы и лицензии сохранены. Полный изменённый исходный код входит в комплект VELIQEN Link. Автоматический фоновый буфер доступен в сборке, подписанной ключом платформы VELIQEN OS; в обычном APK буфер отправляется вручную.</string>
+    <string name="veliqen_upstream_source">Код KDE</string>
+</resources>

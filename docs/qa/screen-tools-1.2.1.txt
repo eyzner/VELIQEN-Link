@@ -1,0 +1,13 @@
+test_bundled_tools_and_server_are_selected_without_global_changes (test_screen.ScreenTests.test_bundled_tools_and_server_are_selected_without_global_changes) ... ok
+test_host_port_validation_rejects_shell_and_options (test_screen.ScreenTests.test_host_port_validation_rejects_shell_and_options) ... ok
+test_launch_uses_selected_authorized_serial (test_screen.ScreenTests.test_launch_uses_selected_authorized_serial) ... ok
+test_missing_serial_never_falls_back_to_another_phone (test_screen.ScreenTests.test_missing_serial_never_falls_back_to_another_phone) ... ok
+test_pair_failure_does_not_echo_code (test_screen.ScreenTests.test_pair_failure_does_not_echo_code) ... ok
+test_pairing_code_only_stdin_never_arguments (test_screen.ScreenTests.test_pairing_code_only_stdin_never_arguments) ... ok
+test_parse_device_states (test_screen.ScreenTests.test_parse_device_states) ... ok
+test_unauthorized_serial_never_launches_scrcpy (test_screen.ScreenTests.test_unauthorized_serial_never_launches_scrcpy) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.004s
+
+OK

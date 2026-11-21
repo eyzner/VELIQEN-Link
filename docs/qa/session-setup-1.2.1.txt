@@ -1,0 +1,16 @@
+test_autostart_default_and_user_opt_out (test_session_setup.SessionSetupTests.test_autostart_default_and_user_opt_out) ... ok
+test_autostart_keeps_unrelated_files_and_refuses_symlink (test_session_setup.SessionSetupTests.test_autostart_keeps_unrelated_files_and_refuses_symlink) ... ok
+test_custom_override_does_not_enable_or_replace_it (test_session_setup.SessionSetupTests.test_custom_override_does_not_enable_or_replace_it) ... ok
+test_enable_only_our_extension_and_save_next_login (test_session_setup.SessionSetupTests.test_enable_only_our_extension_and_save_next_login) ... ok
+test_exact_legacy_override_moves_to_backup_idempotently (test_session_setup.SessionSetupTests.test_exact_legacy_override_moves_to_backup_idempotently) ... ok
+test_existing_external_disable_is_respected (test_session_setup.SessionSetupTests.test_existing_external_disable_is_respected) ... ok
+test_extra_files_or_symlinks_are_preserved (test_session_setup.SessionSetupTests.test_extra_files_or_symlinks_are_preserved) ... ok
+test_global_disable_and_admin_lock_are_not_changed (test_session_setup.SessionSetupTests.test_global_disable_and_admin_lock_are_not_changed) ... ok
+test_modified_override_is_preserved (test_session_setup.SessionSetupTests.test_modified_override_is_preserved) ... ok
+test_package_bundle_precedes_old_user_bundle (test_session_setup.SessionSetupTests.test_package_bundle_precedes_old_user_bundle) ... ok
+test_root_never_writes_user_session (test_session_setup.SessionSetupTests.test_root_never_writes_user_session) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.013s
+
+OK

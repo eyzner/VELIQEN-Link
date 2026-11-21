@@ -1,0 +1,6 @@
+PASS control: amd64, version/dependency constraints, no maintainer scripts
+PASS payload: root ownership, safe modes, launcher, scrcpy/ADB/server, GNOME bridge, XDG autostart
+PASS notices: every vendor license/NOTICE retained byte for byte, corresponding-source guide included
+PASS isolated dpkg: fresh install, module --version, exact source bytes, reinstall, remove, purge
+PASS isolated dpkg: upgrade from previous all package to amd64, user settings preserved
+SCOPE: temporary roots only; dependency installation and live Ubuntu/phone services not exercised

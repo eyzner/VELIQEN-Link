@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "apk": "VELIQEN-Link-1.2.1-release.apk",
+  "apk_sha256": "f2137fe62a838828e043ffddd1545b555c8c20489e1012d04a465a71c9bb8853",
+  "apk_size_bytes": 20736833,
+  "application_id": "tech.veliqen.link",
+  "version_code": 13706,
+  "version_name": "1.37.3-veliqen-link-1.2.1",
+  "certificate_sha256": "2406bd4ece7d445fe73cea99c8dfc02b127a3c3689eeb723d7b6ef6733d69684",
+  "signature_v1_v2_v3_verified": true,
+  "zipalign_4byte_16KiB_pass": true,
+  "debuggable": false,
+  "test_only": false,
+  "fileprovider_authority": "tech.veliqen.link.fileprovider",
+  "physical_device_tested": false
+}

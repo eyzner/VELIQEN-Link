@@ -1,0 +1,22 @@
+{
+  "name": "scrcpy",
+  "version": "v5.0.1",
+  "source": "https://github.com/Genymobile/scrcpy",
+  "download": "https://github.com/Genymobile/scrcpy/releases/download/v5.0.1/scrcpy-linux-x86_64-v5.0.1.tar.gz",
+  "sha256": "9f969d30cc574816077edecda65719c1c70b0aee1df1ba5fa00779ac07b8fd6e",
+  "license": "Apache-2.0; bundled components retain their own notices",
+  "packaging": "Official unmodified upstream Linux x86_64 archive",
+  "source_bundle": "sources/",
+  "source_manifest": "sources/SOURCES.json",
+  "notices": "licenses/",
+  "build_and_relink_instructions": "SOURCES.md",
+  "upstream_build_host": "Ubuntu 22.04, per upstream .github/workflows/release.yml",
+  "locally_rebuilt": false,
+  "binary_archive_modified": false,
+  "platform_tools": {
+    "version": "37.0.1",
+    "upstream_archive_sha256": "d230f13842f60f782a8645f9c813f8f845bf36089ea7289f28c48f17979313f1",
+    "notice": "licenses/Android-platform-tools-37.0.1-NOTICE.txt"
+  },
+  "verification_scope": "Archive SHA-256 and pinned source payloads verified; no claim of byte-for-byte rebuild. See SOURCES.md for Jammy source revision inference."
+}

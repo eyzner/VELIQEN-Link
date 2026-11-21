@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: GPL-3.0-or-later -->
+<permissions>
+    <privapp-permissions package="tech.veliqen.link">
+        <permission name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    </privapp-permissions>
+    <!-- READ_CLIPBOARD_IN_BACKGROUND is signature|role on Android 17.
+         It is granted by the ROM platform certificate, not by this allowlist.
+         SMS, contacts, microphone and notifications are NOT silently granted. -->
+</permissions>

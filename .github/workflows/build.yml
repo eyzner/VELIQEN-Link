@@ -1,0 +1,76 @@
+name: Build and check
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: build-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  desktop:
+    name: Ubuntu package and desktop checks
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Install build and test tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y python3 python3-gi python3-gi-cairo gir1.2-gtk-3.0 dbus-x11 xvfb xauth dpkg-dev binutils desktop-file-utils openssl
+      - name: Build DEB
+        run: /usr/bin/python3 BUILD-PACKAGES.py
+      - name: Check package contents
+        # sudo permits creating the isolated user namespace on runners where
+        # AppArmor restricts unprivileged user namespaces. dpkg still uses only
+        # a disposable root and no maintainer scripts are present.
+        run: sudo /usr/bin/python3 tests/check_standalone_deb.py
+      - name: Test desktop behavior
+        run: |
+          xvfb-run -a dbus-run-session -- /usr/bin/python3 -m unittest discover -s tests -p 'test*.py'
+          xvfb-run -a dbus-run-session -- /usr/bin/python3 -m unittest discover -s linux -p 'test_kde.py'
+      - name: Check installer and APT handling
+        run: |
+          /usr/bin/python3 tests/check_installer_resume.py
+          /usr/bin/python3 tests/check_installer_local_apt.py
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: ubuntu-deb
+          path: artifacts/*.deb
+          if-no-files-found: error
+
+  android:
+    name: Android unsigned build
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-java@dd06d9cba3e5552c54d9f8ea23572deb30010f7c # v6.0.0
+        with:
+          distribution: temurin
+          java-version: '21'
+      - name: Install Android build packages
+        shell: bash
+        run: |
+          test -x "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager"
+          "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --install "platforms;android-37.0" "build-tools;37.0.0"
+      - name: Build unsigned APK
+        run: bash android/BUILD-APK.sh --unsigned --console=plain --max-workers=2
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: android-unsigned-not-installable
+          path: android/artifacts/*-unsigned.apk
+          if-no-files-found: error
+
+# Public CI intentionally has no signing credentials and no release-write access.
+# Sign the selected build locally with the owner's backed-up release key.

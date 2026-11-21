@@ -1,0 +1,13 @@
+{
+  "application_id": "tech.veliqen.link",
+  "key_alias": "veliqen-link",
+  "certificate_sha256": "2406bd4ece7d445fe73cea99c8dfc02b127a3c3689eeb723d7b6ef6733d69684",
+  "key_algorithm": "RSA",
+  "key_size_bits": 3072,
+  "created_on": "2026-11-21",
+  "public_certificate": "signing/release-certificate.pem",
+  "legacy_development_application_id": "org.kde.kdeconnect_tp",
+  "legacy_development_signer_sha256": "cd993b25c8733a383fb2938026cf19f2fcd4e6e3eca6e26fe75eb1cccf25f2a3",
+  "migration": "Separate app installation. Pair the computer and grant permissions once. Existing legacy app data are not modified.",
+  "private_key_in_repository": false
+}

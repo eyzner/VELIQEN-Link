@@ -1,0 +1,93 @@
+[
+  {
+    "file": "scrcpy-5.0.1.tar.gz",
+    "url": "https://github.com/Genymobile/scrcpy/archive/refs/tags/v5.0.1.tar.gz",
+    "sha256": "a24b996ac23d0f674d3237c00b39a97829d8acbe9e1657a6c216fd51ea488ee5",
+    "bytes": 513788,
+    "upstream_hash_verified": false
+  },
+  {
+    "file": "SDL-3.4.18.tar.gz",
+    "url": "https://github.com/libsdl-org/SDL/archive/refs/tags/release-3.4.18.tar.gz",
+    "sha256": "c4b08b950bd29d83caae0ab8d884298d27046a9d30700fb42841c50992665c90",
+    "bytes": 15859500,
+    "upstream_hash_verified": true
+  },
+  {
+    "file": "dav1d-1.5.4.tar.xz",
+    "url": "https://downloads.videolan.org/pub/videolan/dav1d/1.5.4/dav1d-1.5.4.tar.xz",
+    "sha256": "686616b7c69eb88d44459391ab25cac13b6647a3b288835c5784e71c1514a5c5",
+    "bytes": 1038852,
+    "upstream_hash_verified": true
+  },
+  {
+    "file": "ffmpeg-9.0.2.tar.xz",
+    "url": "https://ffmpeg.org/releases/ffmpeg-9.0.2.tar.xz",
+    "sha256": "8c3850283eb25fa026482078a04051e0be17347b09ef81a0849bec15a96e002e",
+    "bytes": 12040788,
+    "upstream_hash_verified": true
+  },
+  {
+    "file": "libusb-1.0.30.tar.gz",
+    "url": "https://github.com/libusb/libusb/archive/refs/tags/v1.0.30.tar.gz",
+    "sha256": "2ae28adb0bb9558c86135c4e1c11b320b0805461e207a64a6e520a114094bf07",
+    "bytes": 436332,
+    "upstream_hash_verified": true
+  },
+  {
+    "file": "v4l-utils_1.22.1-2build1.dsc",
+    "url": "https://archive.ubuntu.com/ubuntu/pool/main/v/v4l-utils/v4l-utils_1.22.1-2build1.dsc",
+    "sha256": "02c929a36bb2a346e05568c93114954f5bfcf6dece62505e95e0f69aa61e0b21",
+    "bytes": 3281,
+    "upstream_hash_verified": false,
+    "provenance": "Ubuntu source descriptor over HTTPS; PGP not verified here"
+  },
+  {
+    "file": "v4l-utils_1.22.1.orig.tar.bz2",
+    "url": "https://archive.ubuntu.com/ubuntu/pool/main/v/v4l-utils/v4l-utils_1.22.1.orig.tar.bz2",
+    "sha256": "65c6fbe830a44ca105c443b027182c1b2c9053a91d1e72ad849dfab388b94e31",
+    "bytes": 2086238,
+    "upstream_hash_verified": true,
+    "hash_source": "v4l-utils_1.22.1-2build1.dsc"
+  },
+  {
+    "file": "v4l-utils_1.22.1.orig.tar.bz2.asc",
+    "url": "https://archive.ubuntu.com/ubuntu/pool/main/v/v4l-utils/v4l-utils_1.22.1.orig.tar.bz2.asc",
+    "sha256": "eee608e914cdf5b322b53d49d48aeae003855d068ee8d9c8d706fd058cabe2af",
+    "bytes": 833,
+    "upstream_hash_verified": true,
+    "hash_source": "v4l-utils_1.22.1-2build1.dsc"
+  },
+  {
+    "file": "v4l-utils_1.22.1-2build1.debian.tar.xz",
+    "url": "https://archive.ubuntu.com/ubuntu/pool/main/v/v4l-utils/v4l-utils_1.22.1-2build1.debian.tar.xz",
+    "sha256": "5fde906bfb3e0a2c68517afd9d02d1480fdc9c36dfd7fa2f883afb7335a85b1f",
+    "bytes": 20096,
+    "upstream_hash_verified": true,
+    "hash_source": "v4l-utils_1.22.1-2build1.dsc"
+  },
+  {
+    "file": "zlib_1.2.11.dfsg-2ubuntu9.2.dsc",
+    "url": "https://archive.ubuntu.com/ubuntu/pool/main/z/zlib/zlib_1.2.11.dfsg-2ubuntu9.2.dsc",
+    "sha256": "ac50a5e5803c128eaef7eceda71fa13ffab3ed1e949008be244d8754d9c59e47",
+    "bytes": 2649,
+    "upstream_hash_verified": false,
+    "provenance": "Ubuntu source descriptor over HTTPS; PGP not verified here"
+  },
+  {
+    "file": "zlib_1.2.11.dfsg.orig.tar.gz",
+    "url": "https://archive.ubuntu.com/ubuntu/pool/main/z/zlib/zlib_1.2.11.dfsg.orig.tar.gz",
+    "sha256": "80c481411a4fe8463aeb8270149a0e80bb9eaf7da44132b6e16f2b5af01bc899",
+    "bytes": 370248,
+    "upstream_hash_verified": true,
+    "hash_source": "zlib_1.2.11.dfsg-2ubuntu9.2.dsc"
+  },
+  {
+    "file": "zlib_1.2.11.dfsg-2ubuntu9.2.debian.tar.xz",
+    "url": "https://archive.ubuntu.com/ubuntu/pool/main/z/zlib/zlib_1.2.11.dfsg-2ubuntu9.2.debian.tar.xz",
+    "sha256": "5678d0b3d1e609297e5a3dedfcb3474bab1cafe82c0c29aec2cef01e49a88d39",
+    "bytes": 60140,
+    "upstream_hash_verified": true,
+    "hash_source": "zlib_1.2.11.dfsg-2ubuntu9.2.dsc"
+  }
+]

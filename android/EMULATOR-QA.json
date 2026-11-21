@@ -1,0 +1,89 @@
+{
+  "status": "passed_scoped_release_install_and_navigation",
+  "version": "1.2.1",
+  "date": "2026-11-21",
+  "apk": {
+    "path": "android/artifacts/VELIQEN-Link-1.2.1-release.apk",
+    "sha256": "f2137fe62a838828e043ffddd1545b555c8c20489e1012d04a465a71c9bb8853",
+    "size_bytes": 20736833,
+    "package": "tech.veliqen.link",
+    "version_code": 13706,
+    "version_name": "1.37.3-veliqen-link-1.2.1",
+    "signer_certificate_sha256": "2406bd4ece7d445fe73cea99c8dfc02b127a3c3689eeb723d7b6ef6733d69684"
+  },
+  "environment": {
+    "emulator": "Official Android Emulator 37.3.10",
+    "system_image": "Official AOSP android-23 default x86_64 revision 10",
+    "api_level": 23,
+    "hardware_acceleration": false,
+    "gpu": "swiftshader",
+    "screen_px": [
+      480,
+      960
+    ],
+    "density": 200,
+    "fresh_avd": true,
+    "dex2oat_filter": "interpret-only",
+    "boot_seconds": 119.3
+  },
+  "checks": [
+    {
+      "check": "Install previous development APK 1.2.0 into fresh emulator",
+      "result": "passed",
+      "observed": "adb install -r returned Success for org.kde.kdeconnect_tp"
+    },
+    {
+      "check": "Install release APK 1.2.1 with legacy APK already present",
+      "result": "passed",
+      "observed": "adb install -r returned Success for tech.veliqen.link"
+    },
+    {
+      "check": "Both application IDs remain installed",
+      "result": "passed",
+      "observed": [
+        "package:tech.veliqen.link",
+        "package:org.kde.kdeconnect_tp"
+      ]
+    },
+    {
+      "check": "Launch VeliqenHomeActivity under new application ID",
+      "result": "passed",
+      "observed": "Status: ok",
+      "activity": "tech.veliqen.link/org.kde.kdeconnect.ui.VeliqenHomeActivity",
+      "total_time_ms": 4458,
+      "wait_time_ms": 4631
+    },
+    {
+      "check": "Home, Settings and Access screens",
+      "result": "passed",
+      "observed": "Observed actual screenshots and UI hierarchy under tech.veliqen.link"
+    },
+    {
+      "check": "System Back from Access to Settings",
+      "result": "passed",
+      "observed": "UI hierarchy contains Настройки and Доступы under new package"
+    },
+    {
+      "check": "AndroidRuntime error log during checked flow",
+      "result": "passed",
+      "observed": "Only main/system log headers; no AndroidRuntime error entries"
+    },
+    {
+      "check": "Emulator lifecycle cleanup",
+      "result": "passed",
+      "observed": "Controller accepted quit and reported stopped"
+    }
+  ],
+  "screenshots_directory": "docs/screenshots/android-release",
+  "not_tested": [
+    "Physical phone installation",
+    "Runtime on Android 17 / API37",
+    "Actual permission grant or denial on modern Android",
+    "Live pairing with Ubuntu or real network transfer",
+    "Bluetooth calls and audio hardware",
+    "MediaProjection stream and Accessibility control on physical device",
+    "Automatic private-data migration from legacy application",
+    "Higher-version upgrade of a published tech.veliqen.link APK"
+  ],
+  "scope": "This confirms the signed public APK installs beside the old test app and its core navigation runs on the minimum supported API23 emulator. It does not establish hardware integration or full device compatibility."
+}

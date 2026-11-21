@@ -1,0 +1,18 @@
+{
+  "project": "KDE Connect Android",
+  "official_repository": "https://invent.kde.org/network/kdeconnect-android",
+  "retrieved_mirror": "https://github.com/KDE/kdeconnect-android.git",
+  "commit": "6b9e7b2cf371c5b40cf75079cc21e4e66b4b464d",
+  "upstream_version": "1.37.3",
+  "retrieved_on": "2026-11-20",
+  "adaptation": "VELIQEN Link 1.2.1",
+  "package": "tech.veliqen.link",
+  "license": "GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL",
+  "compile_sdk": "37.0",
+  "build_tools": "37.0.0",
+  "gradle": "9.6.0",
+  "agp": "9.5.1",
+  "kotlin": "2.4.21",
+  "source_namespace": "org.kde.kdeconnect_tp",
+  "release_signing": "Private permanent VELIQEN release key; public certificate in RELEASE-SIGNING.json"
+}

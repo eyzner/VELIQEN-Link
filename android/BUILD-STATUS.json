@@ -1,0 +1,80 @@
+{
+  "version": "1.2.1",
+  "build_status": "successful",
+  "build_date": "2026-11-21",
+  "command": "bash android/BUILD-APK.sh --release --offline --console=plain --max-workers=2",
+  "gradle": "9.6.0",
+  "agp": "9.5.1",
+  "kotlin": "2.4.21",
+  "jdk_major": 21,
+  "jdk_version": "21.0.13",
+  "build_host": "Debian 13 x86_64",
+  "compile_sdk": 37,
+  "min_sdk": 23,
+  "target_sdk": 37,
+  "build_tools": "37.0.0",
+  "package_id": "tech.veliqen.link",
+  "source_namespace": "org.kde.kdeconnect_tp",
+  "app_label": "VELIQEN Link",
+  "version_code": 13706,
+  "version_name": "1.37.3-veliqen-link-1.2.1",
+  "apk_sha256": "f2137fe62a838828e043ffddd1545b555c8c20489e1012d04a465a71c9bb8853",
+  "apk_size_bytes": 20736833,
+  "unsigned_apk_sha256": "3f5fef09c6a2d33ae20df94b82fb4f9d243e797631d73a6c58cbfe7dccd88a8e",
+  "unsigned_apk_size_bytes": 20619102,
+  "signing": "permanent private VELIQEN release key; private backup excluded from public artifacts",
+  "signer_certificate_sha256": "2406bd4ece7d445fe73cea99c8dfc02b127a3c3689eeb723d7b6ef6733d69684",
+  "signature_v1_v2_v3_verified": true,
+  "signature_matches_legacy_development": false,
+  "zipalign_4byte_16KiB_pass": true,
+  "debuggable": false,
+  "test_only": false,
+  "background_clipboard_manifest_permission": true,
+  "read_logs_manifest_permission": false,
+  "launcher_activity": "org.kde.kdeconnect.ui.VeliqenHomeActivity",
+  "launcher_source_sha256": "2d5447add70c9ab45b5ab58844d024e53f34b11d47e09a43502c738fca07a6ca",
+  "fileprovider_authority": "tech.veliqen.link.fileprovider",
+  "manifest_package_scoped_authorities": [
+    "tech.veliqen.link.fileprovider",
+    "tech.veliqen.link.androidx-startup",
+    "tech.veliqen.link.MmsFileProvider"
+  ],
+  "rom_default_apk_version_verified": "1.2.1",
+  "rom_payload_matches_unsigned_apk": true,
+  "rom_installer_checks": [
+    "read-only dry-run",
+    "APK package validation",
+    "idempotent reinstall",
+    "reject modified managed payload",
+    "preserve unrelated product edits during rollback",
+    "exact original restoration",
+    "idempotent rollback"
+  ],
+  "source_patch": {
+    "clean_upstream_apply": "passed",
+    "full_source_files_hashes_matching": 702,
+    "patch_sha256": "b03597762b16b5a59551d5affd0a4e4d668145b315d13f7ff6a1c256bb0d29e5"
+  },
+  "signing_safety_checks": [
+    "initialization refuses to overwrite existing key/password",
+    "release verifier rejects legacy development APK"
+  ],
+  "native_screen": "MediaProjection with mutually authenticated paired KDE certificates; no ADB required",
+  "android_emulator_ui_check": {
+    "status": "passed_scoped_release_install_and_navigation",
+    "version": "1.2.1",
+    "detailed_report": "android/EMULATOR-QA.json",
+    "apk_sha256": "f2137fe62a838828e043ffddd1545b555c8c20489e1012d04a465a71c9bb8853",
+    "factual_runtime_scope": "This confirms the signed public APK installs beside the old test app and its core navigation runs on the minimum supported API23 emulator. It does not establish hardware integration or full device compatibility.",
+    "legacy_and_release_installed_together": true
+  },
+  "tested_on_physical_phone": false,
+  "complete_aosp_rom_built": false,
+  "migration": "New application ID installs separately from legacy development org.kde.kdeconnect_tp. New pairing and user permissions required. No automatic uninstall or data migration.",
+  "notes": [
+    "Current hardware call/audio, modern Android permission grants and live paired-device behavior require validation on the user phone and Ubuntu laptop.",
+    "Normal APK cannot obtain signature background clipboard permission; the ROM must sign with its own platform key.",
+    "Public APK and platform-signed ROM app share the new ID but are different signing tracks. Update system builds with the original platform key."
+  ],
+  "factual_runtime_scope": "Compilation, release signature, manifest, clean installation beside legacy test APK, launch and basic navigation on API23 software emulator, source patch application and ROM source-tree integration verified. No physical hardware or API37 runtime claim."
+}

@@ -1,0 +1,5 @@
+PASS download-only: repository dependency cached once; no dpkg install
+REPRODUCED --no-download: local absolute .deb becomes a relative pathname inside APT
+PASS corrected install: absolute local .deb reaches dpkg guard; cached dependency not downloaded again
+PASS safety: guard refused actual install; temporary dpkg status stayed empty; no sudo or system mutation
+apt 3.0.3 (amd64)
